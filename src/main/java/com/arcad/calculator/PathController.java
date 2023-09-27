@@ -18,7 +18,7 @@ public class PathController {
         if (calculatorService.isCheckParam(args)) {
             result = calculatorService.plus(args);
         }
-        return "Plus: num1=" + num1 + ", num2=" + num2 + ", Resultat=" + result;
+        return "Plus: num1=" + num1 + ", num2=" + num2 + ", Resultat=" + result + calculatorService.footer;
     }
     @GetMapping(path = "/calculator/minus")
     public String minus(@RequestParam("num1") String num1, @RequestParam("num2") String num2) {
@@ -27,7 +27,7 @@ public class PathController {
         if (calculatorService.isCheckParam(args)) {
             result = calculatorService.minus(args);
         }
-        return "Minus: num1=" + num1 + ", num2=" + num2 + ", Resultat=" + result;
+        return "Minus: num1=" + num1 + ", num2=" + num2 + ", Resultat=" + result + calculatorService.footer;
     }
     //    /calculator/multiply?num1=5&num2=5
     @GetMapping(path = "/calculator/multiply")
@@ -37,7 +37,7 @@ public class PathController {
         if (calculatorService.isCheckParam(args)) {
             result = calculatorService.multiply(args);
         }
-        return "Multiply: num1=" + num1 + ", num2=" + num2 + ", Resultat=" + result;
+        return "Multiply: num1=" + num1 + ", num2=" + num2 + ", Resultat=" + result + calculatorService.footer;
     }
     //    /calculator/divide?num1=5&num2=5
     @GetMapping(path = "/calculator/divide")
@@ -47,6 +47,6 @@ public class PathController {
         if (calculatorService.isCheckParam(args)) {
             result = calculatorService.divide(args);
         }
-        return "Plus: num1=" + num1 + ", num2=" + num2 + ", Resultat=" + result;
+        return "Plus: num1=" + num1 + ", num2=" + num2 + ", Resultat=" + result + calculatorService.footer;
     }
 }

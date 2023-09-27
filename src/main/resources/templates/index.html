@@ -11,86 +11,46 @@
 <body>
     <h1>CALCULATOR</h1>
     <p>Введите 2 числа и выберите действие</p>
-    <form action="/calculator" method="get">
-        <label>
-            <input name="num1" type="text" placeholder="Первое число">
-            <input name="num2" type="text" placeholder="Второе число">
-        </label>
-        <button type="submit" name="operation" value="plus">Plus</button>
-        <button type="submit" name="operation" value="minus">Minus</button>
-        <button type="submit" name="operation" value="multiply">Multiply</button>
-        <button type="submit" name="operation" value="divide">Divide</button>
-    </form>
-    <div class="row">
-        <div class="col-md" style="color: red; background-color: blue"><h1>Hello! Calculator!</h1></div>
-        <div class="col-md" style="color: blue; background-color: red">Программа-калькулятор</div>
-    </div>
-    <div>
-        <i class="bi bi-1-square"></i>
-        <i class="bi bi-2-square"></i>
-        <i class="bi bi-3-square"></i>
-        <i class="bi bi-4-square"></i>
-        <i class="bi bi-5-square"></i>
-        <i class="bi bi-6-square"></i>
-        <i class="bi bi-7-square"></i>
-        <i class="bi bi-8-square"></i>
-        <i class="bi bi-9-square"></i>
-        <i class="bi bi-0-square"></i>
-        <i class="bi bi-c-square"></i>
-    </div>
-    <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-        <li><a data-toggle="tab" href="#plus">Plus</a></li>
-        <li><a data-toggle="tab" href="#minus">Minus</a></li>
-        <li><a data-toggle="tab" href="#multiply">Multiply</a></li>
-        <li><a data-toggle="tab" href="#divide">Divide</a></li>
-    </ul>
 
-    <div class="tab-content">
-        <div id="home" class="tab-pane fade in active">
-            <h3>HOME</h3>
-            <p>Content 1.</p>
-        </div>
-        <div id="plus" class="tab-pane fade">
-            <h3>Plus</h3>
-            <form action="/calculator/plus" method="get">
-                <label>
-                    <input name="num1" type="text" placeholder="Первое число">
-                    <input name="num2" type="text" placeholder="Второе число">
-                </label>
-                <button type="submit">Result</button>
-            </form>
-        </div>
-        <div id="minus" class="tab-pane fade">
-            <h3>Minus</h3>
-            <form action="/calculator/minus" method="get">
-                <label>
-                    <input name="num1" type="text" placeholder="Первое число">
-                    <input name="num2" type="text" placeholder="Второе число">
-                </label>
-                <button type="submit">Result</button>
-            </form>
-        </div>
-        <div id="multiply" class="tab-pane fade">
-            <h3>Multiply</h3>
-            <form action="/calculator/multiply" method="get">
-                <label>
-                    <input name="num1" type="text" placeholder="Первое число">
-                    <input name="num2" type="text" placeholder="Второе число">
-                </label>
-                <button type="submit">Result</button>
-            </form>
-        </div>
-        <div id="divide" class="tab-pane fade">
-            <h3>Divide</h3>
-            <form action="/calculator/divide" method="get">
-                <label>
-                    <input name="num1" type="text" placeholder="Первое число">
-                    <input name="num2" type="text" placeholder="Второе число">
-                </label>
-                <button type="submit">Result</button>
-            </form>
-        </div>
+    <div class="">
+        <h3>Plus</h3>
+        <form action="/calculator/plus" method="get">
+            <label>
+                <input name="num1" type="text" placeholder="Первое число">
+                <input name="num2" type="text" placeholder="Второе число">
+            </label>
+            <button type="submit">Result</button>
+        </form>
+    </div>
+    <div id="minus" class="">
+        <h3>Minus</h3>
+        <form action="/calculator/minus" method="get">
+            <label>
+                <input name="num1" type="text" placeholder="Первое число">
+                <input name="num2" type="text" placeholder="Второе число">
+            </label>
+            <button type="submit">Result</button>
+        </form>
+    </div>
+    <div id="multiply" class="">
+        <h3>Multiply</h3>
+        <form action="/calculator/multiply" method="get">
+            <label>
+                <input name="num1" type="text" placeholder="Первое число">
+                <input name="num2" type="text" placeholder="Второе число">
+            </label>
+            <button type="submit">Result</button>
+        </form>
+    </div>
+    <div id="divide" class="">
+        <h3>Divide</h3>
+        <form action="/calculator/divide" method="get">
+            <label>
+                <input name="num1" type="text" placeholder="Первое число">
+                <input name="num2" type="text" placeholder="Второе число">
+            </label>
+            <button type="submit">Result</button>
+        </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

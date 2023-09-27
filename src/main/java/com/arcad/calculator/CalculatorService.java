@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CalculatorService implements CalculatorServiceImpl{
-
+    public final String footer = "<br><a href=\"/\">HOME</a>";
     @Override
     public boolean isCheckParam(String[] args) {
         boolean isReturn = true;
