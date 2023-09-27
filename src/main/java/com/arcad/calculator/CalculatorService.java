@@ -10,7 +10,7 @@ public class CalculatorService implements CalculatorServiceImpl{
         boolean isReturn = true;
         for (String arg : args) {
             try {
-                Integer.parseInt(arg);
+                Float.parseFloat(arg);
             } catch (NumberFormatException e) {
                 isReturn = false;
                 break;
@@ -19,36 +19,36 @@ public class CalculatorService implements CalculatorServiceImpl{
         return isReturn;
     }
 
+    float[] argsStringToFloat(String[] args){
+        return new float[]{Float.parseFloat(args[0]), Float.parseFloat(args[1])};
+    }
+
     @Override
     public String plus(String[] args) {
-        int iNum1 = Integer.parseInt(args[0]);
-        int iNum2 = Integer.parseInt(args[1]);
-        int iResult = iNum1 + iNum2;
-        return String.valueOf(iResult);
+        float[] num = argsStringToFloat(args);
+        float fResult = num[0] + num[1];
+        return String.valueOf(fResult);
     }
 
     @Override
     public String minus(String[] args) {
-        int iNum1 = Integer.parseInt(args[0]);
-        int iNum2 = Integer.parseInt(args[1]);
-        int iResult = iNum1 - iNum2;
+        float[] num = argsStringToFloat(args);
+        float iResult = num[0] - num[1];
         return String.valueOf(iResult);
     }
 
     @Override
     public String multiply(String[] args) {
-        int iNum1 = Integer.parseInt(args[0]);
-        int iNum2 = Integer.parseInt(args[1]);
-        int iResult = iNum1 * iNum2;
+        float[] num = argsStringToFloat(args);
+        float iResult = num[0] * num[1];
         return String.valueOf(iResult);
     }
 
     @Override
     public String divide(String[] args) {
-        int iNum1 = Integer.parseInt(args[0]);
-        int iNum2 = Integer.parseInt(args[1]);
-        if (iNum2 != 0) {
-            Float fResult = (float) iNum1 / (float) iNum2;
+        float[] num = argsStringToFloat(args);
+        if (num[1] != 0) {
+            float fResult = num[0] / num[1];
             return String.valueOf(fResult);
         } else {
             return "Деление на ноль не допустимо";
