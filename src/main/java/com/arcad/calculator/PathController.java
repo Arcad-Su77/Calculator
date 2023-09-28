@@ -14,7 +14,7 @@ public class PathController {
     @GetMapping(path = "/calculator/plus")
     public String plus(@RequestParam("num1") String num1, @RequestParam("num2") String num2) {
         String[] args = {num1, num2};
-        String result = "Ошибка в исходных данных.";
+        String result = " Ошибка в исходных данных.";
         if (calculatorService.isCheckParam(args)) {
             result = calculatorService.plus(args);
         }
@@ -33,7 +33,7 @@ public class PathController {
     @GetMapping(path = "/calculator/multiply")
     public String multiply(@RequestParam("num1") String num1, @RequestParam("num2") String num2) {
         String[] args = {num1, num2};
-        String result = "Ошибка в исходных данных.";
+        String result = " Ошибка в исходных данных.";
         if (calculatorService.isCheckParam(args)) {
             result = calculatorService.multiply(args);
         }
@@ -43,7 +43,7 @@ public class PathController {
     @GetMapping(path = "/calculator/divide")
     public String divide(@RequestParam("num1") String num1, @RequestParam("num2") String num2) {
         String[] args = {num1, num2};
-        String result = "Ошибка в исходных данных.";
+        String result = " Ошибка в исходных данных.";
         if (calculatorService.isCheckParam(args)) {
             result = calculatorService.divide(args);
         }
