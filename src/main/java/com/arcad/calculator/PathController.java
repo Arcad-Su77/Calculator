@@ -47,6 +47,6 @@ public class PathController {
         if (calculatorService.isCheckParam(args)) {
             result = calculatorService.divide(args);
         }
-        return "Plus: num1=" + num1 + ", num2=" + num2 + ", Resultat=" + result + calculatorService.footer;
+        return "Divide: num1=" + num1 + ", num2=" + num2 + ", Resultat=" + result + calculatorService.footer;
     }
 }
