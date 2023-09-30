@@ -1,4 +1,4 @@
-package com.arcad.calculator;
+package com.arcad.calculator.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

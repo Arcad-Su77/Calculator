@@ -1,10 +1,11 @@
-package com.arcad.calculator;
+package com.arcad.calculator.service.api;
 
+import com.arcad.calculator.service.impl.CalculatorServiceImpl;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CalculatorService implements CalculatorServiceImpl{
-    public final String footer = "<br>=========================<br><a href=\"/\">HOME</a>";
+public class CalculatorService implements CalculatorServiceImpl {
+
     @Override
     public boolean isCheckParam(String[] args) {
         boolean isReturn = true;
