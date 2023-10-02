@@ -16,7 +16,7 @@ public class LoginService {
     }
 
     public boolean isPassword(String password) throws WrongLoginException {
-        if (password.matches(forgetChar) && password.isEmpty()) {
+        if (password.matches(forgetChar) || password.isEmpty()) {
             return true;
         } else {
             return false;
