@@ -6,30 +6,22 @@ import org.springframework.stereotype.Service;
 public class LoginService {
     private final String forgetChar = "^[a-zA-Z0-9_]{1,20}$";
 
-    public boolean isLogin(String login) throws WrongLoginException {
-        if (login.matches(forgetChar)) {
-            return true;
-        } else {
-            return false;
-//            throw new WrongLoginException();
+    public void isLogin(String login) throws WrongLoginException {
+        if (!login.matches(forgetChar)) {
+            throw new WrongLoginException("Логин должен содержать в себе только латинские буквы, цифры и знак подчеркивания");
+        }
+
+    }
+
+    public void isPassword(String password) throws WrongLoginException {
+        if (!password.matches(forgetChar) || password.isEmpty()) {
+            throw new WrongLoginException("Пароль должен содержать в себе только латинские буквы, цифры и знак подчеркивания");
         }
     }
 
-    public boolean isPassword(String password) throws WrongLoginException {
-        if (password.matches(forgetChar) || password.isEmpty()) {
-            return true;
-        } else {
-            return false;
-//            throw new WrongLoginException();
-        }
-    }
-
-    public boolean isConfirmPassword(String password, String confirmPassword) throws WrongLoginException {
-        if (password.equals(confirmPassword)) {
-            return true;
-        } else {
-            return false;
-//            throw new WrongLoginException();
+    public void isConfirmPassword(String password, String confirmPassword) throws WrongLoginException {
+        if (!password.equals(confirmPassword)) {
+            throw new WrongLoginException("Пароль не совпадает с контрольным паролем");
         }
     }
 }

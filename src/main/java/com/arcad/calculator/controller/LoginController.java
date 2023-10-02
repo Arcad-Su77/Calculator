@@ -20,17 +20,25 @@ public class LoginController {
     @GetMapping("/login")
     public String login(@RequestParam("login") String login,
                         @RequestParam("password") String password,
-                        @RequestParam("confirmPassword") String confirmPassword) throws WrongLoginException {
+                        @RequestParam("confirmPassword") String confirmPassword) {
         String strOut = "Авторизация пройдена";
-        if (!loginService.isLogin(login)) {
-            strOut = "Логин должен содержать в себе только латинские буквы, цифры и знак подчеркивания";
-        } else {
-            if (!loginService.isPassword(password)) {
-                strOut = "Пароль должен содержать в себе только латинские буквы, цифры и знак подчеркивания";
-            }
-            if (!loginService.isConfirmPassword(password, confirmPassword)) {
-                strOut = "Пароль не совпадает с контрольным паролем";
-            }
+        String sLogin = "Логин должен содержать в себе только латинские буквы, цифры и знак подчеркивания";
+        String sPassword = "Пароль должен содержать в себе только латинские буквы, цифры и знак подчеркивания";
+        String sComfirmPassword = "Пароль не совпадает с контрольным паролем";
+        try {
+            loginService.isConfirmPassword(password, confirmPassword);
+        } catch (WrongLoginException e) {
+            strOut = sComfirmPassword;
+        }
+        try {
+            loginService.isPassword(password);
+        } catch (WrongLoginException e) {
+            strOut = sPassword;
+        }
+        try {
+            loginService.isLogin(login);
+        } catch (WrongLoginException e) {
+            strOut = sLogin;
         }
         return viewService.viewOut("Пользователь " + login + ": " + strOut);
     }
