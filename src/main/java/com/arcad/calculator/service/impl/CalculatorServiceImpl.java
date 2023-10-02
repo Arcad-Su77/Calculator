@@ -1,6 +1,6 @@
-package com.arcad.calculator;
+package com.arcad.calculator.service.impl;
 
-interface CalculatorServiceImpl {
+public interface CalculatorServiceImpl {
     boolean isCheckParam(String[] args);
     String plus(String[] args);
 
