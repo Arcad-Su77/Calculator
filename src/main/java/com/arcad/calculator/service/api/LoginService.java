@@ -1,5 +1,6 @@
 package com.arcad.calculator.service.api;
 
+import com.arcad.calculator.exception.WrongLoginException;
 import org.springframework.stereotype.Service;
 
 @Service
