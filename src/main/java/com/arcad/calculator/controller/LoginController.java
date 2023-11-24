@@ -1,8 +1,8 @@
 package com.arcad.calculator.controller;
 
+import com.arcad.calculator.exception.WrongLoginException;
 import com.arcad.calculator.service.api.LoginService;
 import com.arcad.calculator.service.api.ViewService;
-import com.arcad.calculator.service.api.WrongLoginException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
